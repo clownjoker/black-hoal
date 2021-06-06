@@ -14,12 +14,11 @@ import BlackHoal from '../screens/BlackHoal';
 const Tab = createBottomTabNavigator();
 
 export default function MyTabs() {
-    const activeTintLabelColor = '#569EF8';
-    const inactiveTintLabelColor = '#909090';
+    
 
   return (
     <Tab.Navigator
-      initialRouteName="home"
+      initialRouteName="blackHoal"
       tabBarOptions={{
         activeTintColor: '#ddd',
         inactiveTintColor: '#CAD1E5',
@@ -35,7 +34,7 @@ export default function MyTabs() {
             component={Profile}
             options={{
             tabBarIcon: ({ color, size }) => (
-                <Image source={require('../asstes/image/2.jpg')} style={{width:25,height:25,borderRadius:100,resizeMode:'center'}}/>
+                <Image source={require('../asstes/image/1.jpg')} style={{width:27,height:27,borderRadius:25}}/>
                 ),
             }}
             
@@ -51,7 +50,6 @@ export default function MyTabs() {
             }}
             
         />
-
         <Tab.Screen
             name="blackHoal"
             component={BlackHoal}
@@ -62,6 +60,7 @@ export default function MyTabs() {
             }}
             
         />
+
 
         <Tab.Screen
             name="add"
